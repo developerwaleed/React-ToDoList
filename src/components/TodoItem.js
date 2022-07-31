@@ -1,9 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class TodoItem extends Component {
+class TodoItem extends React.Component {
   render() {
     return (
-      <div>TodoItem</div>
-    )
+      <li>
+        <input
+          type="checkbox"
+          checked={this.props.todo.completed}
+          onChange={() => this.props.handleChangeProps(this.props.todo.id)}
+        />
+        <button onClick={() => this.props.deleteTodoProps(this.props.todo.id)}>
+          Delete
+        </button>
+        {this.props.todo.title}
+      </li>
+    );
   }
 }
+
+export default TodoItem;

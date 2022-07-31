@@ -1,10 +1,12 @@
 import React, { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import TodoContainer from './components/TodoContainer';
 
-ReactDOM.render(
-  <React.StrictMode>
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
     <TodoContainer />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
