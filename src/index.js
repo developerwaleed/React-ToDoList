@@ -1,7 +1,7 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import TodoContainer from './components/TodoContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import TodoContainer from './components/TodoContainer';
 import About from './pages/About';
 import Navbar from './pages/NavBar';
 import NotMatch from './pages/NotMatch';
@@ -20,5 +20,5 @@ root.render(
         <Route path="*" element={<NotMatch />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );
