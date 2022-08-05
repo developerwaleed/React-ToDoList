@@ -16,6 +16,7 @@
   text-transform: lowercase;
   text-align: center;
 }
+
 .inner {
   width: 100%;
   padding: 8rem 10px 4rem;
@@ -60,7 +61,7 @@
 }
 
 .textInput {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #dfdfdf;
-  }
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+}
