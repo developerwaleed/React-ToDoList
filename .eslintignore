@@ -1,0 +1,2 @@
+eslint-disable react/prop-types: 0
+eslint-disable react/destructuring-assignment: 0
