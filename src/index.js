@@ -1,6 +1,24 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import TodoContainer from './components/TodoContainer';
+import About from './pages/About';
+import Navbar from './pages/NavBar';
+import NotMatch from './pages/NotMatch';
+import './App.css';
 
-const element = <h1>Hello from Create React App</h1>
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
 
-ReactDOM.render(element, document.getElementById("root"))
+root.render(
+  <StrictMode>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<TodoContainer />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotMatch />} />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>,
+);
